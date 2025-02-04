@@ -150,7 +150,7 @@ public class TestController {
     public String fullBodyGzipped() {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 1; i <= 1000; i++) {
-            stringBuilder.append("some body line ")
+            stringBuilder.append("{\"access_token\":\"test masking\"}")
                          .append(i)
                          .append("\n");
         }
