@@ -9,10 +9,7 @@ import org.apache.tomcat.util.net.SocketWrapperBase;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.util.ReflectionUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -145,7 +142,7 @@ public class TestController {
         response.getWriter().close();
     }
 
-    @GetMapping(value = "/full-body-gzipped", produces = MediaType.TEXT_HTML_VALUE)
+    @RequestMapping(value = "/full-body-gzipped", produces = MediaType.TEXT_HTML_VALUE)
     @ResponseBody
     public String fullBodyGzipped() {
         StringBuilder stringBuilder = new StringBuilder();
